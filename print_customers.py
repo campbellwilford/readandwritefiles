@@ -4,7 +4,7 @@ infile = open('customers.csv','r')
 
 csvfile = csv.reader(infile,delimiter=',')
 
-next(csvfile)
+next(csvfile) 
 
 for record in csvfile:
     
