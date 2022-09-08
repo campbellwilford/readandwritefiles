@@ -1,4 +1,4 @@
-read_philosphers
+
 def main():
     infile = open('philosphers.txt','r')
 
