@@ -15,12 +15,12 @@ for record in csvfile:
     Bonus = record[4]
     TotalPay = str(int(record[3]) + (int(record[3]) * float(record[4])))
     
-    print(format('ID:','20'))
-    print(format('EmpFName:','20'))
-    print(format('EmpLName','20'))
+    print(format('ID:','20') + ID)
+    print(format('EmpFName:','20') + EmpFName)
+    print(format('EmpLName','20') + EmpLName)
     print(format('Salary','20') + Salary)
     print(format('Bonus','20') + Bonus)
-    print(format('TotalPay','20'))
+    print(format('TotalPay','20') + TotalPay)
     input()
     
 
