@@ -7,32 +7,33 @@ def main():
 
     outfile = open('avg_steps.csv','w')
 
-    counter = 1 
+    outfile.write('Mnoth,Steps\n')
+
+    monthNames = ['','January','February','March','Arpil','May','June','July','August','September','October','November']
+
+
+    daycounter = 0
     step_total = 0
-    month_cnt = 0
+    month_cnt = 1
 
     next(csvfile)
 
 
-    for line in csvfile: 
+    for rec in csvfile: 
 
-        if line == month_cnt:   
-            month_cnt += 1
-            step_cnt = int(line[1])
-            step_total = step_cnt + step_total
+        if int(rec[0])==month_cnt:  
+            totalsteps += int(rec[1])
+            daycounter += 1
         else:
-            monthly_avg = (step_total)/(month_cnt)
-            outfile.write
-            step_total=step_cnt + step_total
-            avg_steps =  step_total/counter
-    
-    outfile.write() 
-            
+            totalsteps = int(rec[1])
+            daycounter = 1
+            month_cnt +=1
+ 
+    avg_steps =  round(step_total/daycounter,2)
+    outfile.write(monthNames[month_cnt]+','+str(avg_steps)+'\n')           
 
-#I'll be honest I cannot figure this out I've been working on it for hours 
-#I would have gone to your office hours but I had to drive to Dallas and I thought i would be able to figure it out in time that's my bad
-#I'm accepting defeat
-            
+
+    outfile.close()      
     
     
 
