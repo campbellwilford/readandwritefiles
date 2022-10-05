@@ -7,7 +7,7 @@ def main():
 
     outfile = open('avg_steps.csv','w')
 
-    outfile.write('Mnoth,Steps\n')
+    outfile.write('Month,Steps\n')
 
     monthNames = ['','January','February','March','Arpil','May','June','July','August','September','October','November']
 
@@ -22,10 +22,10 @@ def main():
     for rec in csvfile: 
 
         if int(rec[0])==month_cnt:  
-            totalsteps += int(rec[1])
+            step_total += int(rec[1])
             daycounter += 1
         else:
-            totalsteps = int(rec[1])
+            step_total = int(rec[1])
             daycounter = 1
             month_cnt +=1
  
